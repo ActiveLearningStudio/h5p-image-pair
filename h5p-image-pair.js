@@ -487,6 +487,10 @@ H5P.ImagePair = (function(EventDispatcher, $, UI) {
         result === cards.length);
       self.trigger(completedEvent);
 
+      // trigger submitted-curriki XAPI
+      self.triggerXAPIScored(result, cards.length, 'submitted-curriki');
+
+
       // set focus on the first button in the footer
       self.$footer.children('button').first().focus();
       self.trigger('resize');
