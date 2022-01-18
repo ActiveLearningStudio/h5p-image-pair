@@ -730,13 +730,13 @@ H5P.ImagePair = (function(EventDispatcher, $, UI, StopWatch) {
         definition.source[index] = {
           'id': 'item_' + mate.correctPair.index + '',
           'description': {
-            'en-US': mate.correctPair.getImage().attr('alt')
+            'en-US': mate.correctPair.getImageAlt()
           }
         };
         definition.target[index] = {
           'id': 'item_' + mate.index + '',
           'description': {
-            'en-US': mate.getImage().attr('alt')
+            'en-US': mate.getImageAlt()
           }
         };
         if (index === 0) {
