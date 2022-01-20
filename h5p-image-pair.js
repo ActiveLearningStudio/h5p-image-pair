@@ -431,7 +431,7 @@ H5P.ImagePair = (function(EventDispatcher, $, UI, StopWatch) {
      */
     self.showSubmitButton = function () {
       self.$submitButton = createButton(self.submitAnswer, 'fa-submit',
-          parameters.l10n.submitAnswer);
+          parameters.currikisettings.currikil10n.submitAnswer);
       self.$submitButton.appendTo(self.$footer);
     };
 
@@ -527,14 +527,14 @@ H5P.ImagePair = (function(EventDispatcher, $, UI, StopWatch) {
       self.$progressBar.appendTo(self.$feedbacks);
       self.$feedbacks.appendTo(self.$footer);
 
-      if (parameters.behaviour.allowRetry) {
+      if (parameters.behaviour) {
         //set the value if retry is enabled
         self.$retryButton = createButton(self.retry, 'fa-repeat',
           parameters.l10n.tryAgain);
         self.$retryButton.appendTo(self.$footer);
       }
 
-      if(!parameters.behaviour.disableSubmitButton) {
+      if(!parameters.currikisettings.disableSubmitButton) {
         self.showSubmitButton();
       }
 
