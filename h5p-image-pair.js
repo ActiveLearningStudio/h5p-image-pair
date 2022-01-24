@@ -20,6 +20,14 @@ H5P.ImagePair = (function(EventDispatcher, $, UI, StopWatch) {
     var solutionMode = false;
     var stopWatch;
 
+    parameters = $.extend(true, {}, {
+      currikisettings:{
+        disableSubmitButton: false,
+        currikil10n: {
+          submitAnswer: 'Submit'
+        }
+      }
+    }, parameters);
     /**
      * pushing the cards and mates to appropriate arrays and
      * defining various events on which each card should respondTo
